@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frisbee IQ Trainer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">🥏 Frisbee IQ <small id="meta"></small></div>
+    <nav class="tabs">
+      <button data-tab="where-to-run">Where to run</button>
+      <button data-tab="reaction">Reaction</button>
+      <button data-tab="flashcards">Flashcards</button>
+      <button data-tab="stats">Stats</button>
+    </nav>
+    <div class="filters">
+      <label>Level ≤
+        <select id="level">
+          <option value="1">1 · Luật + vị trí</option>
+          <option value="2">2 · Offense cơ bản</option>
+          <option value="3">3 · Defense cơ bản</option>
+          <option value="4">4 · Chiến thuật team</option>
+          <option value="5">5 · Nâng cao</option>
+        </select>
+      </label>
+      <select id="concept" aria-label="Concept"></select>
+    </div>
+  </header>
+  <main id="view"><p class="empty">Đang đọc wiki…</p></main>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
