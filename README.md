@@ -16,12 +16,19 @@ python app/server.py
 ```
 Mở http://127.0.0.1:8000. App đọc thẳng `wiki/*.md` → sửa wiki, reload là drill cập nhật.
 
-| Drill | Cách chơi | Data |
+| Tab | Cách chơi | Data |
 |---|---|---|
-| **Where to run** | Click vùng trên sơ đồ sân (hoặc phím 1–9) | `wiki/scenarios/` |
-| **Reaction** | 2–5 giây, bấm phím 1–9 (bố cục bàn phím số) | scenario `difficulty ≥ 3` |
+| **Where to run** | Nhìn sân **từ mắt mình** (hoặc sau lưng), người chạy thật; click chỗ chạy / phím 1–9 → xem **mô phỏng pha bóng** với tốc độ của bạn | `wiki/scenarios/` |
+| **Reaction** | Như trên nhưng chỉ 2–5 giây, phím 1–9 (bố cục bàn phím số) | scenario `difficulty ≥ 3` |
 | **Flashcards** | Space lật, 1 = chưa nhớ, 2 = nhớ rồi | `wiki/glossary.md`, `wiki/concepts/` |
 | **Stats** | % đúng theo concept, concept yếu nhất | `app/progress/progress.json` |
+| **Thể lực** | Hồ sơ cơ thể → ước lượng tốc độ, tăng tốc, số sprint/point; so với người guard bạn | `app/progress/profile.json` |
+
+- Sau mỗi câu: kết quả mô phỏng (tách được bao nhiêu mét, có bị đập đĩa không), bảng **khoẻ/mệt × fake/không fake**
+  cho đúng thể trạng của bạn, và **bài tập trên sân** cho buổi tập tới.
+- Thuật ngữ được gạch chân (hover xem nghĩa) + liệt kê định nghĩa ngay dưới phần giải thích.
+- Mô hình thể lực là **ước lượng thô** (`app/sim/physics.js`). Đo thật 20 m sprint ở tab Thể lực để mô phỏng sát hơn.
+- `progress.json`, `stats.md`, `profile.json` là dữ liệu cá nhân → **gitignored** (repo public).
 
 App ưu tiên scenario thuộc **concept yếu nhất**. Kết quả được ghi ra `app/progress/stats.md` để ingest ngược vào `wiki/entities/me.md`.
 
@@ -38,11 +45,13 @@ App ưu tiên scenario thuộc **concept yếu nhất**. Kết quả được gh
 | `wiki/entities/` | roles, team, me, plays (tự xây từ practice notes) |
 | `wiki/scenarios/` | 28 tình huống → nguồn cho drill |
 | `app/` | web app local (Python stdlib server + JS modules, không build step) |
+| `app/sim/` | mô hình thể lực + mô phỏng pha bóng (ai chạy đâu, D đuổi, ném/bắt) |
+| `app/ui/view3d.js` | góc nhìn ngang trên sân (canvas, phối cảnh tự viết, không thư viện) |
 
 ## Trạng thái (theo build phases)
 - [x] Phase 0 — folder + schema
 - [x] Phase 1 — seed wiki (kiến thức chung; **chưa có nguồn raw thật** → cần bỏ WFDF rules vào `raw/rules/`)
 - [x] Phase 2 — 28 scenario L1–5, có ratio mixed
-- [x] Phase 3 — MVP: SVG field + Where to run + Flashcards
+- [x] Phase 3 — MVP: Where to run + Flashcards (nay: góc nhìn ngang + mô phỏng động theo thể lực)
 - [ ] Phase 4 — loop practice notes → observed plays (bắt đầu từ buổi tập tới)
 - [~] Phase 5 — Reaction drill ✓, progress stats ✓, call recognition ✗ (chờ có plays)

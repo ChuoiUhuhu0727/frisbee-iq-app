@@ -30,5 +30,8 @@ Offense mạnh khi **có khoảng trống**. Mỗi người đứng cách nhau �
 ## Team mình làm khác gì?
 Chưa có dữ liệu.
 
+## Tập trên sân
+Đấu tập: mỗi lần đĩa đổi chỗ, liếc xung quanh — trong 5 m quanh bạn có ai không? Có → giãn ra.
+
 ## Drill liên quan
 - Where to run: [[S-001]], [[S-017]], [[S-022]]

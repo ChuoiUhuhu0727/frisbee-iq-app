@@ -35,5 +35,8 @@ sources: [[sources/llm-general-knowledge]]
 ## Team mình làm khác gì?
 Chưa có dữ liệu.
 
+## Tập trên sân
+Với 1 handler: khi nghe "stalling 5", bùng nổ 3 bước dump cut ra open side phía sau. 10 lần. Nhận dump xong nhìn ngay sang phía bên kia sân.
+
 ## Drill liên quan
 - Where to run: [[S-002]], [[S-012]], [[S-018]]

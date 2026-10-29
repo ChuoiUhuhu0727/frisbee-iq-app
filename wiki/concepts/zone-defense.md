@@ -36,5 +36,8 @@ Defense không guard người mà guard **vùng**. Phổ biến nhất: **cup** 
 ## Team mình làm khác gì?
 Chưa có dữ liệu. Ghi: team có call zone không? tên call là gì?
 
+## Tập trên sân
+Khi tập vs zone: xin làm popper 3 point. Mỗi lần đĩa swing (chuyền ngang), trượt theo để luôn đứng ngay sau cup.
+
 ## Drill liên quan
 - Where to run: [[S-019]], [[S-020]]

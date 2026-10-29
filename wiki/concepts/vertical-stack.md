@@ -44,5 +44,8 @@ Cutters xếp **một hàng dọc giữa sân** (stack), handlers đứng sau đ
 ## Team mình làm khác gì?
 Chưa có dữ liệu. Ghi vào `raw/team/practice-notes/` khi thấy team xếp stack (giữa sân hay lệch? bao nhiêu người?).
 
+## Tập trên sân
+Mỗi point offense khi đấu tập: trước khi cut, nói thầm "mình đứng thứ mấy trong stack, open side bên nào".
+
 ## Drill liên quan
 - Where to run: [[S-001]], [[S-003]], [[S-004]], [[S-005]]

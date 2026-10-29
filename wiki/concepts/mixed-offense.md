@@ -34,5 +34,8 @@ Offense mixed mạnh nhất khi **cả 7 người đều là mối đe doạ**. 
 ## Team mình làm khác gì?
 Chưa có dữ liệu. Ghi lại: team có play iso cho nữ không? Handler nữ hay nam?
 
+## Tập trên sân
+Mục tiêu mỗi point offense: ≥ 1 cut hết tốc + gọi đĩa. Ghi số cut thật sự vào practice note.
+
 ## Drill liên quan
 - Where to run: [[S-013]], [[S-023]]

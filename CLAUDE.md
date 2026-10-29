@@ -18,6 +18,12 @@ và quen dần chiến thuật của team. App trong `app/` đọc thẳng các 
 - Giải thích bằng **tiếng Việt, plain language**, câu ngắn.
 - **Thuật ngữ giữ tiếng Anh** (stack, force, mark, huck, dump, swing, cut, clear, break side, open side...).
 - Mỗi concept phải trả lời được câu "**vậy mình chạy đâu / đứng đâu?**".
+- **Người dùng chưa biết nhiều thuật ngữ**: lần đầu một thuật ngữ xuất hiện trong page (hoặc trong câu trả lời chat),
+  ghi định nghĩa ngắn hoặc ví dụ ngay bên cạnh, vd: "cut **under** (chạy về phía đĩa)". Thuật ngữ mới → thêm vào `glossary.md`
+  (app tự gạch chân + hiện định nghĩa cho mọi thuật ngữ có trong glossary).
+- **Thể trạng thật**: nữ, nhỏ người, chưa chơi thể thao đồng đội → chạy chậm hơn đa số đối thủ, ít sprint mỗi point.
+  Lời khuyên phải tính tới điều đó (fake, timing, vị trí, cut ngắn, tiết kiệm sprint), không giả định chạy nhanh hơn defender.
+  Số đo cá nhân nằm ở `app/progress/profile.json` (gitignored — repo public, **không** chép số đo vào wiki).
 
 ## 4. Ưu tiên nguồn (khi mâu thuẫn)
 `raw/team/` > `raw/team/coach-feedback/` > `raw/rules/` (luật) > `raw/articles/` > `raw/videos/` > kiến thức chung của LLM.
@@ -46,6 +52,7 @@ Mọi page bắt đầu bằng frontmatter `---` với các key đơn giản (`k
 ## Lỗi beginner hay gặp
 ## Mixed division        ← nếu liên quan
 ## Team mình làm khác gì?
+## Tập trên sân          ← 1 bài tập cụ thể làm được ở buổi tập tới (quiz đúng ≠ làm được trên sân). App hiện mục này sau mỗi câu.
 ## Drill liên quan
 ```
 
@@ -97,7 +104,8 @@ Mình chạy đâu?
 - `x`: 0 = sideline trái → 100 = sideline phải. `y`: 0 = trên (deep) → 100 = dưới (sau lưng đĩa).
 - Người ném thuận tay phải. **Force forehand → open side = bên phải** (x lớn). **Force backhand → open side = bên trái**.
 - `offense`: `[x, y, nhãn]` — nhãn `"H"` handler, `"C"` cutter, `""` không nhãn.
-- `defense`: `[x, y]` hoặc `[x, y, "M"]` (M = marker).
+- `defense`: `[x, y]` hoặc `[x, y, "M"]` (M = marker). Person defense: **`defense[i]` guard `offense[i]`** (cùng thứ tự,
+  cùng số người; marker đứng cùng index với người cầm đĩa). Zone: số người khác nhau → app tự ghép người gần nhất.
 - Nhãn `"me"` = mình — **đúng 1 người**, nằm trong `offense` hoặc `defense` (scenario defense).
 - `arrows` (tuỳ chọn): `[x1, y1, x2, y2]` — đường chạy của người khác (KHÔNG vẽ đường chạy đáp án).
 

@@ -19,6 +19,7 @@ WIKI = ROOT / "wiki"
 PROGRESS_DIR = ROOT / "app" / "progress"
 PROGRESS_JSON = PROGRESS_DIR / "progress.json"
 STATS_MD = PROGRESS_DIR / "stats.md"
+PROFILE_JSON = PROGRESS_DIR / "profile.json"  # thông tin cơ thể — gitignored, không lên GitHub
 PORT = next((int(a) for a in sys.argv[1:] if a.isdigit()), 8000)
 MAX_BODY = 5 * 1024 * 1024
 
@@ -99,15 +100,26 @@ class Handler(SimpleHTTPRequestHandler):
             self._json(load_wiki())
         elif self.path == "/api/progress":
             self._json(load_progress())
+        elif self.path == "/api/profile":
+            self._json(json.loads(PROFILE_JSON.read_text(encoding="utf-8")) if PROFILE_JSON.exists() else None)
         else:
             super().do_GET()
 
     def do_POST(self):
-        if self.path != "/api/progress":
+        if self.path not in ("/api/progress", "/api/profile"):
             return self._json({"error": "not found"}, 404)
         length = int(self.headers.get("Content-Length", 0))
         if length > MAX_BODY:
             return self._json({"error": "too large"}, 413)
+        if self.path == "/api/profile":
+            try:
+                profile = json.loads(self.rfile.read(length))
+                assert isinstance(profile, dict)
+            except (ValueError, AssertionError):
+                return self._json({"error": "bad profile json"}, 400)
+            PROGRESS_DIR.mkdir(parents=True, exist_ok=True)
+            PROFILE_JSON.write_text(json.dumps(profile, ensure_ascii=False, indent=1), encoding="utf-8")
+            return self._json({"ok": True})
         try:
             progress = json.loads(self.rfile.read(length))
             assert isinstance(progress.get("attempts"), list)

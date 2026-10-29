@@ -2,3 +2,8 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# Dữ liệu cá nhân — repo public, không commit
+app/progress/progress.json
+app/progress/stats.md
+app/progress/profile.json

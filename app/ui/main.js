@@ -3,8 +3,14 @@ import { loadProgress, conceptStats, attempts } from './progress.js';
 import * as whereToRun from '../drills/where-to-run/drill.js';
 import * as reaction from '../drills/reaction/drill.js';
 import * as flashcards from '../drills/flashcards/drill.js';
+import { loadProfile, hasProfile, mountProfile } from './profile.js';
+import { setGlossary, annotate } from './terms.js';
 
-const DRILLS = { 'where-to-run': whereToRun, reaction, flashcards, stats: { mount: mountStats } };
+const DRILLS = {
+  'where-to-run': whereToRun, reaction, flashcards,
+  stats: { mount: mountStats },
+  profile: { mount: root => mountProfile(root, { annotate }) },
+};
 const store = {
   get(k, d) { try { return localStorage.getItem(k) ?? d; } catch { return d; } },
   set(k, v) { try { localStorage.setItem(k, v); } catch { /* không sao */ } },
@@ -66,7 +72,8 @@ function mountStats(root) {
 
 async function init() {
   try {
-    [wiki] = await Promise.all([loadWiki(), loadProgress()]);
+    [wiki] = await Promise.all([loadWiki(), loadProgress(), loadProfile()]);
+    setGlossary(wiki.glossary);
   } catch (e) {
     view.innerHTML = `<p class="empty">Không đọc được wiki. Chạy app bằng <code>python app/server.py</code> (không mở file HTML trực tiếp).</p>`;
     return;
@@ -78,7 +85,7 @@ async function init() {
   document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => open(b.dataset.tab)));
   levelSel.addEventListener('change', () => { store.set('fiq.level', levelSel.value); open(store.get('fiq.tab', 'where-to-run')); });
   conceptSel.addEventListener('change', () => open(store.get('fiq.tab', 'where-to-run')));
-  open(store.get('fiq.tab', 'where-to-run'));
+  open(hasProfile() ? store.get('fiq.tab', 'where-to-run') : 'profile');
 }
 
 init();

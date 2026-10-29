@@ -25,9 +25,12 @@ export function mount(root, { wiki, maxLevel, concept }) {
   const pool = () => wiki.scenarios.filter(s => s.field && s.level <= maxLevel
     && (!concept || s.concept === concept) && (allBox.checked || s.difficulty >= 3));
 
+  const concepts = Object.fromEntries(wiki.concepts.map(c => [c.slug, c]));
   const showReady = () => {
     state = 'ready';
     cancelAnimationFrame(raf); clearTimeout(timer);
+    view?.destroy(); view = null;
+    stage.classList.remove('scn');
     fill.style.width = '0';
     const n = pool().length;
     stage.innerHTML = n
@@ -44,8 +47,10 @@ export function mount(root, { wiki, maxLevel, concept }) {
     current = pickWeighted(p, undefined, current?.id);
     const limit = +secSel.value * 1000;
     const t0 = performance.now();
+    view?.destroy();
     view = renderScenario(stage, current, {
       compact: true,
+      concepts,
       onAnswer: (correct, chosen) => {
         state = 'answered';
         cancelAnimationFrame(raf); clearTimeout(timer);
@@ -67,12 +72,14 @@ export function mount(root, { wiki, maxLevel, concept }) {
   };
 
   const onKey = e => {
+    if (e.target.closest?.('input, select')) return;
     const digit = e.code?.startsWith('Numpad') ? e.code.slice(6) : e.key;
     if (state === 'running' && /^[1-9]$/.test(digit)) view.key(+digit);
     else if ((e.key === ' ' || e.key === 'Enter') && state !== 'running') { e.preventDefault(); start(); }
   };
   document.addEventListener('keydown', onKey);
+  stage.addEventListener('click', e => { if (e.target.closest('[data-next]') && state !== 'running') start(); });
   allBox.addEventListener('change', showReady);
   showReady();
-  return () => { document.removeEventListener('keydown', onKey); clearTimeout(timer); cancelAnimationFrame(raf); };
+  return () => { document.removeEventListener('keydown', onKey); clearTimeout(timer); cancelAnimationFrame(raf); view?.destroy(); };
 }

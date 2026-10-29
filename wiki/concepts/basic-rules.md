@@ -38,5 +38,8 @@ Ultimate: 2 đội × 7 người. Đưa đĩa vào endzone đối phương **b�
 ## Team mình làm khác gì?
 Chưa có dữ liệu. **Việc cần làm:** bỏ WFDF rules (PDF/text) vào `raw/rules/` rồi ingest để thay phần kiến thức chung này.
 
+## Tập trên sân
+Nhờ 1 bạn đếm stall to. Tập pivot (giữ 1 chân trụ): nhận đĩa, giữ chân trụ, bước chân kia ra 2 bên, 10 lần mỗi bên rồi mới ném.
+
 ## Drill liên quan
 - [[S-027]], [[S-028]]

@@ -31,5 +31,8 @@ Trong person defense ở mixed, thường **nữ guard nữ, nam guard nam**. Ch
 ## Team mình làm khác gì?
 Chưa có dữ liệu.
 
+## Tập trên sân
+Trước mỗi point defense khi đấu tập: chọn người, gọi to tên/số của họ trước khi pull.
+
 ## Drill liên quan
 - [[S-026]]

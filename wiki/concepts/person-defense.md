@@ -36,5 +36,8 @@ Mỗi defender guard **một người**. Đứng sao cho người mình guard **
 ## Team mình làm khác gì?
 Chưa có dữ liệu.
 
+## Tập trên sân
+Tập 1v1 với 1 bạn nhanh hơn: bạn chỉ được đứng sẵn ở open side, phía under, cách 1–2 m. Cho họ cut 10 lần, đếm bao lần bạn chặn được under (không đuổi theo deep).
+
 ## Drill liên quan
 - Where to run: [[S-010]], [[S-011]]

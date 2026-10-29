@@ -33,5 +33,8 @@ Cut không nhận được đĩa → **rời khỏi lane ngay**, để người 
 ## Team mình làm khác gì?
 ⚠ Chưa có dữ liệu. Hỏi coach: "Cut xong mình clear ra break side hay chạy tiếp ra sau?"
 
+## Tập trên sân
+Sau mỗi cut không nhận đĩa trong buổi tập: đếm "một – hai", phải ra khỏi lane trước khi đếm xong. Clear bằng chạy nhẹ để giữ sức.
+
 ## Drill liên quan
 - Where to run: [[S-007]], [[S-008]]

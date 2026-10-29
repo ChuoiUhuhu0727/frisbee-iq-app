@@ -72,7 +72,8 @@ function parseScenario(name, text) {
 function parseConcept(name, text) {
   const { meta, body } = parseFrontmatter(text);
   const title = (body.match(/^# (.*)$/m) || [, name])[1];
-  return { slug: name, title, level: parseInt(meta.level, 10) || 1, short: sections(body)['Nói ngắn gọn'] || '' };
+  const sec = sections(body);
+  return { slug: name, title, level: parseInt(meta.level, 10) || 1, short: sec['Nói ngắn gọn'] || '', field: sec['Tập trên sân'] || '' };
 }
 
 function parseGlossary(text) {

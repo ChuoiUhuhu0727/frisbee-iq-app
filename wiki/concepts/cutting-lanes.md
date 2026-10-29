@@ -42,5 +42,8 @@ Ba câu "có" → cut. Một câu "không" → chờ / tạo khoảng trống.
 ## Team mình làm khác gì?
 Chưa có dữ liệu.
 
+## Tập trên sân
+Với 1 handler cách 12 m: handler gọi "force trái/phải", bạn cut vào open side. 10 lần, handler đổi force giữa chừng để bạn phải đọc lại.
+
 ## Drill liên quan
 - Where to run: [[S-003]], [[S-004]], [[S-013]], [[S-014]], [[S-016]], [[S-024]]

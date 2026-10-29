@@ -30,5 +30,8 @@ Trong mixed, mỗi đội có 7 người trên sân: **4 nam – 3 nữ** hoặc
 ## Team mình làm khác gì?
 Chưa có dữ liệu. Ghi lại: team mình dùng ABBA không? Ai là người gọi line?
 
+## Tập trên sân
+Trong scrimmage (đấu tập), 5 point đầu: trước mỗi pull, tự đếm line mình bao nhiêu nam / nữ.
+
 ## Drill liên quan
 - [[S-025]]

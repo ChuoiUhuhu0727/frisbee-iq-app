@@ -36,5 +36,8 @@ sources: [[sources/llm-general-knowledge]]
 ## Team mình làm khác gì?
 Chưa có dữ liệu.
 
+## Tập trên sân
+Khi team tập ho stack: giữ khoảng cách đều với 2 người cạnh bạn; cut xong quay về đúng chỗ cũ trong hàng.
+
 ## Drill liên quan
 - Where to run: [[S-021]], [[S-022]]

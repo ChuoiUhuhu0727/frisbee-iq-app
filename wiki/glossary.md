@@ -45,3 +45,12 @@ sources: [[sources/llm-general-knowledge]]
 - **ratio** — tỉ lệ nam/nữ trên sân mỗi point trong mixed (4-3 / 3-4)
 - **ABBA** — thứ tự ratio luân phiên A-B-B-A giữa các point
 - **line** — 7 người ra sân cho 1 point (O-line / D-line)
+- **fake** — giả vờ bước/chạy 1 hướng để defender phản ứng sai, rồi bùng nổ hướng thật
+- **cushion** — khoảng cách (1–2 m) defender cố tình chừa với người mình guard để không bị vượt ngay
+- **separation** — khoảng trống giữa cutter và defender lúc nhận đĩa; ≥ 1–1,5 m thì handler dám ném
+- **D** — chặn/đập được đĩa ("get a D"), cũng dùng để chỉ defense / defender
+- **marker** — người mark: đứng trước thrower, chặn 1 bên và đếm stall
+- **thrower** — người đang cầm đĩa và chuẩn bị ném
+- **scrimmage** — đấu tập trong buổi tập, chia 2 đội chơi như trận thật
+- **open lane** — lane ở open side, nơi handler ném tới dễ nhất
+- **sprint** — chạy hết tốc độ trong vài giây (mỗi cut thật sự là 1 sprint)

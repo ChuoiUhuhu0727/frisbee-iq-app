@@ -35,5 +35,8 @@ sources: [[sources/llm-general-knowledge]]
 ## Team mình làm khác gì?
 Chưa có dữ liệu. Ghi lại: team hay call force gì? ai call?
 
+## Tập trên sân
+Khi đứng chờ ở ngoài sân: mỗi lần có người cầm đĩa, nói to "open bên trái / phải" dựa vào marker (người mark) đứng bên nào.
+
 ## Drill liên quan
 - Where to run: [[S-009]], [[S-010]], [[S-011]]

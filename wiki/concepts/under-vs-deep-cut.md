@@ -42,5 +42,8 @@ Chọn cái nào phụ thuộc vào **defender của mình đứng đâu**.
 ## Team mình làm khác gì?
 Chưa có dữ liệu.
 
+## Tập trên sân
+Nhờ 1 bạn làm defender, tự chọn đứng trên hoặc dưới bạn (không báo trước). Bạn nhìn D rồi quyết định under hay deep trong 1 giây. 10 lần. Thêm fake 1–2 bước trước mỗi cut.
+
 ## Drill liên quan
 - Where to run: [[S-004]], [[S-005]], [[S-006]], [[S-015]]
